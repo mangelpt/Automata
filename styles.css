@@ -1,0 +1,46 @@
+body {
+  background-color: #f2f2f2;
+  width: 100%; /* specify a width! */
+  margin: 0 auto; /* center */
+  text-align: center;
+}
+.automata {
+  margin-top: 20%;
+  background-color: orange;
+  width: 60%;
+  margin: auto;
+  background-color: #ffff;
+  padding: 10px;
+  border-radius: 8px;
+}
+#transitionDiv {
+  background-color: #ffff;
+  margin: 0 auto;
+  width: 60%;
+}
+#streamInput {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  background-color: lightgoldenrodyellow;
+}
+button {
+  width: 100%;
+  background-color: darkolivegreen;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: medium;
+}
+
+li {
+  list-style-type: circle;
+  textalign: center;
+}
