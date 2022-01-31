@@ -1,15 +1,17 @@
 body {
   background-color: #f2f2f2;
-  width: 100%; /* specify a width! */
-  margin: 0 auto; /* center */
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 .automata {
-  margin-top: 20%;
-  background-color: orange;
   width: 60%;
   margin: auto;
-  background-color: #ffff;
+  background-color:lightslategrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   border-radius: 8px;
 }
@@ -19,8 +21,23 @@ body {
   width: 60%;
 }
 #streamInput {
-  width:90%;
-  padding: 12px 20px;
+  border: none;
+  width:20%;
+  padding: 5px 5px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: medium;
+  font-weight: bold;
+  background-color: lightgoldenrodyellow;
+  border-radius: 8px;
+}
+
+#state{
+  border-radius: 8px;
+  border: none;
+  width:30%;
+  padding: 5px 5px;
   margin: 8px 0;
   box-sizing: border-box;
   text-align: center;
@@ -38,9 +55,4 @@ button {
   margin: 4px 2px;
   cursor: pointer;
   font-size: medium;
-}
-
-li {
-  list-style-type: circle;
-  textalign: center;
 }

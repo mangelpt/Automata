@@ -8,16 +8,16 @@
 <body>
 <p>Automata</p>
 <div id="DFA" class="automata">
+    <label for="streamInput"> transition value :</label>
     <input id="streamInput" label="Stream Input" { beginValidation()}>
+    <label for="state">
+        state:
+        <input type="text" id="state">
+    </label>
     <button onclick="beginValidation()">send</button>
 </div>
 <div id="transitionDiv">
-    <ul id="transitionList">
-    </ul>
     <h3 id="results"></h3>
-</div>
-<br>
-<div class="node-container" id="node-container">
 </div>
 </body>
 </html>

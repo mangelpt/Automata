@@ -1,51 +1,48 @@
 let listDiv = null;
 
 const automata = {
-    X: 2,
-    Y: 6,
-    Z: 4,
-    startState: 2,
-    AcceptedState: 6,
+    state: ["X", "Y", "Z"],
+    transitions: [2, 6, 4],
+    currentState: "",
+    set setState(value) {
+        this.currentState = this.state[value];
+    }
 };
 
 function getNextState(input) {
-    if (automata.X === +input) {
-        return automata.Y
-    }
-    if (automata.Y === +input) {
-        return automata.Z
-    }
-    if (automata.Z === +input) {
-        return automata.Z
+    if (automata.transitions.includes(+input)) {
+        if (automata.transitions[0] === +input) {
+            automata.setState = 1;
+        }
+        if (automata.transitions[1] === +input) {
+            automata.setState = 2;
+        }
+        if (automata.transitions[2] === +input) {
+            automata.setState = 2;
+        }
     } else {
         return "invalid input";
     }
-
 }
 
 function validateInput(input) {
     const state = getNextState(input);
-    drawTransition("State: " + state);
-    if (state === automata.AcceptedState) {
-        return "Accepted"
+    const currentState = automata.currentState;
+    drawState(currentState);
+    if (state) {
+        return state
     }
     return "";
 }
 
-function drawTransition(output) {
-    const node = document.createElement("li");
-    listDiv.appendChild(node);
-    const text = document.createTextNode(output);
-    node.appendChild(text);
+function drawState(output) {
+    const state = document.getElementById("state");
+    state.value = output;
 }
 
 function beginValidation() {
     const input = document.getElementById("streamInput").value;
-    listDiv = document.getElementById("transitionList");
-    listDiv.innerHTML = "";
     const output = validateInput(input.trim());
-    const text = document.createTextNode(output);
     const resultsNode = document.getElementById("results");
-    resultsNode.innerHTML = "";
-    resultsNode.appendChild(text);
+    resultsNode.innerHTML = output;
 }
