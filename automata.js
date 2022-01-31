@@ -4,7 +4,6 @@ const automata = {
     X: 2,
     Y: 6,
     Z: 4,
-
     startState: 2,
     AcceptedState: 6,
 };
@@ -24,9 +23,8 @@ function getNextState(input) {
 
 }
 
-function validateInput(input, currentState) {
+function validateInput(input) {
     const state = getNextState(input);
-    console.log(state)
     drawTransition("State: " + state);
     if (state === automata.AcceptedState) {
         return "Accepted"
