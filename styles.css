@@ -19,7 +19,7 @@ body {
   width: 60%;
 }
 #streamInput {
-  width: 50%;
+  width:90%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -29,7 +29,7 @@ body {
   background-color: lightgoldenrodyellow;
 }
 button {
-  width: 100%;
+  width: 50%;
   background-color: darkolivegreen;
   border: none;
   color: white;
