@@ -1,9 +1,7 @@
-let listDiv = null;
-
 const automata = {
     state: ["X", "Y", "Z"],
     transitions: [2, 6, 4],
-    currentState: "",
+    currentState: "X",
     set setState(value) {
         this.currentState = this.state[value];
     }
